@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QM.PDA.DA", "QM.PDA.DA\QM.PDA.DA.vbproj", "{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QM.PDA.BO", "QM.PDA.BO\QM.PDA.BO.vbproj", "{6B66BD69-A264-4A14-9D3F-7D987724F57B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QM.PDA.Screens", "QM.PDA.Screens\QM.PDA.Screens.vbproj", "{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QM.PDA.App", "QM.PDA.App\QM.PDA.App.vbproj", "{50BCC40C-4520-4373-B154-09AA707D3D16}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F98599A-B12A-41FD-856A-5B182C95B9F5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		_Versions.txt = _Versions.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B66BD69-A264-4A14-9D3F-7D987724F57B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50BCC40C-4520-4373-B154-09AA707D3D16}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

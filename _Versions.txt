@@ -1,0 +1,212 @@
+/****************************************/
+	Questionnaire Mobile for PDA
+	Version History
+	Created By: Fredy Muñoz
+	        On: 2008/Feb/13
+/****************************************/
+
+v2.8.2.0 2011/Dec/20
+* Line up versions with Designer.
+
+v2.8.99.3 2011/Dec/09
+* [Change] The users were moved from qms to PDAUser table in qmc file.
+* [Change] The reports are in the qmc file instead of xml format.
+
+v2.8.99.2 2011/Nov/11
+* [Bugfix] When the textbox screen is empty the value now returns nothing 
+	instead of empty string.
+* [Change] Added the parameter 'value' to the custom validation and the
+	customValidationFailMessage when the custom validation fails.
+* [Bugfix] Date and time screens now are regional settings sensitive.
+
+v2.8.99.0 2011/Sep/06
+* [Feature] Added all the english translations in forms and multilanguage 
+	support for the application and all code messages.
+* [Change] Updated the script to generate the PDA cab file to include the
+	english resources dll files.
+
+V2.8.0.1 2011/Aug/30
+* [Bugfix] CheckBox Screen wasn't working, when retrieving the legal values
+	the ShortName column was missing.
+
+V2.8.0.0 2011/Apr/06
+* [Change] With each update, the subject last modif metadata will be updated.
+* [Change] Qmc file contains flags to indicate if a container executes or not
+	the OnNewRecord/OnNewSubject procedure.
+* [Change] Qmc file contains flags to indicate events and preconditions and
+	works exactly as conditions or range validations.
+* [Change] Qmc file now has all the legal values in a single table named
+	LegalValue with an extra column for TableName.
+* [Change] Conditions and range validations are external code called by the
+	application. In the qmc file are just flags to look for them in the dll.
+
+V2.7.0.0 2011/Feb/17
+* [Feature] Every time a screen is created, the pda checks if the PDA date is
+	acceptable compared to the one in registry.
+* [Feature] If the volume is under 40% or muted, the timer sets the volume 
+	level to 60%.
+* [BugFix] The timer screen was crashing when closing while the countdown is 
+	active.
+
+V2.6.1.0 2011/Feb/07
+* [Feature] Added TimerScreen in tools menu.
+
+v2.6.0.0 2011/Ene/28
+* Changed version number to align versions with QM.Designer and QM.Generator.
+
+v2.4.0.100 2011/Ene/28
+* [Feature] Code to filter legal values by group was moved from DropDownScreen
+	to Screen.vb to make it work with Drop downs, radio buttons and check box.
+
+v2.4.0.100 2010/Oct/08
+* [Feature] In the subject screen, instead of display the integer value of a 
+	variable with legalValueTable in confirmation fields, displays the text
+	of the legal value.
+
+v2.4.0.0 2010/Sep/27
+* [Change] For a CheckBox Screen the Variable Name property is used as a prefix
+    to concatenate to the ShortName of every legal value item to form the
+    variable name for every bit column.
+* [Change] For a GPSSReading Screen a set of fixed variables is created. The
+    Variable Name property is used as a prefix for every fixed variable.
+* [Feature] RadioButtonScreen and CheckBoxScreen now supports multi-line!
+* [Feature] InfoScreen replaces a variable name (@VariableName) in the MainText
+    with its value.
+* [Feature] GridScreen added.
+* [Change] The OnChange method is now executed after the data is stored in the
+    database. Previusly the method was executed before the data was stored.
+* [Feature] Maintext, Othertext1 and Othertext2 replaces variablenames with 
+	its values.
+
+
+v2.3.3.0 2010/Mar/08
+* [Change] The field Site was added to the Report definition in the Reports
+    file.
+* [Change] The class BO.Common was added with methods to get Legal Values
+    tables items from a specific table and also to get a single Legal Values
+    table item.
+
+
+v2.3.2.0 2010/Feb/02
+* [Change] The SubjectCompletedRecord falg is set when the user reaches the
+    exit screen instead of when the users tap the Next button in the exit
+    screen.
+
+
+v2.3.1.0 2010/Ene/28
+* [Change] Reports file as XML
+* [Change] Addition of the SimpleReport Screen.
+
+
+v2.3.0.0 2010/Ene/01
+* [Feature] Reports added.
+* [Bug fix] [Date Screen] When the value in the screen is cleared the old value
+    is still stored in the DB.
+* [Bug fix] The Info screen does not call the OnLoad nor the OnUnload
+    procedures.
+
+
+v2.2.1.0 2009/Nov/10
+* [Change][App][Subject.vb] The performance of the Subject list screen was
+    improved for a large list of subjects.
+
+
+v2.2.0.0 2009/Nov/04
+* [Bug fix][Screen][Question][DropDownScreen.vb][InputValue] The desition to
+    determine if the screen has an emtpy value changed to check if the
+    SelectedIndex is 0.
+* [Change] The Order field was added to the Security table in the Security file
+    to sort the list of users in the Login Screen.
+* [Feature] Changed database engine to Microsoft SQL Server Compact 3.5
+
+
+v2.1.1.0 2009/Oct/06
+* [Feature] Added the GPSReadingScreen.
+* [Bug fix][Screen][Question][DropDownScreen.vb] There was an
+    InvalidCastException when the Screen.GetInitialValue() returned a String,
+    even when the String contained an Integer value.
+
+
+v2.1.0.2 2009/May/04
+* [Bug fix] BO.DataRecord.New(ByVal dataTableName As String, ByVal SASubjectID
+    As String) When this method is used with a Subject Table record, the
+    application crashes because it can't find the
+    SubjectQuestionnaireInstanceID field.
+
+
+v2.1.0.1 2009/Apr/29
+* [Bug fix] BO.Questionnaire.DataRecord and BO.Section.DataRecord Property
+	may be NULL if it is called before a call to Item Property.
+
+
+v2.1.0.0 2009/Apr/03
+* [Feature] Support for multiple records of a Questionnaire for a Subject.
+	(Múltiple Instances)
+* [Feature] Support for a data table for the Questionnaire.
+* [Feature] When a section is done and there are no more pending sections, the
+	PDA will take the user to the Questionnaire Selection Screen.
+* [Feature] Semi dynamic Login Screen.
+* [Feature] GPS Tool.
+* [Bug fix] The Subject selection screen will show only those subjects created
+	in the Current Site.
+* [Bug fix] The Screen Header was corrected to show the Questionnaire Set short
+    name.
+* [Bug fix] Trim the text input value in the TextBox and TextArea Screen.
+* [Bug fix] Limit the input size of the TextBox and TextArea Screen to avoid
+    the SQL truncation error.
+
+
+v2.0.1.0 2009/Feb/05
+* [Bug fix] The Site Screen preselects the User's Default Site.
+* [Change] Change the RadioButtons controls for a DropDownList to select a Site
+    in the Site Screen.
+
+
+v2.0.0.0 2009/Jan/28
+* [Change] Study installation to the PDA through the Device Registry. An
+    installation package can be built with the CabWiz tool.
+* [Change] Support for multiples Studies in the same PDA.
+* [Change] The SQL CE files extensions changed from .sdf to:
+	- .qms: Security File.
+	- .qmc: Configuration File.
+	- .qmd: Data File.
+* [Change] The Password for the SQL CE files changed.
+* [Change] The Site and the Study are completely separated.
+* [Feature] Support for Questionnaire Sets.
+* [Feature] Display the Screen Number or the Variable Name in the Screen.
+* [Change][App][Main.vb][Method:Main] The primary key of the Questionnaire
+    table changed to include QuestionnaireID only.
+
+
+v1.0.1.0 2008/Nov/07
+* [Modification][App][Action.vb][Method:New] A label was added to the Action
+    screen to show the version of the study.
+* [Change][DA][Study.vb][Method:GetSingle] The primary key of the Study table
+    changed to include StudyID only.
+* [Change][DA][Questionnaire.vb][Method:GetSingle] The primary key of the
+    Questionnaire table changed to include QuestionnaireID only.
+* [Change][DA][Questionnaire.vb][Method:GetAll] The foreing key to the Study
+    table changed to include StudyID only.
+* [Change][BO][Study.vb][Property:Questionnaires] The method
+    Questionnaire.GetAll changed parameters.
+* [Change][BO][Study.vb][Method:New] The foreing key to the Site table changed
+    to include SiteID only.
+* [Change][BO][Questionnaire.vb][Class:Questionnaire] The field _siteID was
+    deleted.
+* [Change][BO][Questionnaire.vb][Method:New] The primary key of the
+    Questionnaire table changed to include QuestionnaireID only.
+* [Change][BO][Questionnaire.vb][Method:GetAll] The foreing key to the Study
+    table changed to include StudyID only.
+
+
+v1.0.0.1 2008/Nov/06
+* [Bug fix][App][Main.vb][Method:ExecuteCurrentSection] A section was set as
+    complete when the user pressed the back button of the first screen of the
+    section.
+* [Bug fix][BO][Engine.vb][Method:GoToNextScreen][Method:Finish] A section was
+    set as complete when the user pressed the back button of the first screen
+    of the section.
+
+
+v1.0.0.0 2008/Nov/04
+* Initial stable release.

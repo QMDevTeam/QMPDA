@@ -1,0 +1,190 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+QM.PDA.App
+</name>
+</assembly>
+<members>
+<member name="T:QM.PDA.QuestionnaireInstance">
+	<summary>
+ Displays all the available Questionnaire Instances and allows to add more.
+ </summary>
+</member><member name="T:QM.PDA.Questionnaire">
+	<summary>
+ Displays all the available Questionnaries.
+ </summary>
+</member><member name="M:QM.PDA.Subject.CanGoNext">
+	<summary>
+ Check if it is possible to go to the next screen.
+ </summary>
+	<returns><c>True</c> if it is possible, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Subject.GoNext">
+	<summary>
+ Stores the value before going to the next screen.
+ </summary>
+</member><member name="M:QM.PDA.Subject.FillSubjectList">
+	<summary>
+ Fills the list with the Subjects in the Study.
+ </summary>
+</member><member name="M:QM.PDA.Subject.DisplayConfirmationFields">
+	<summary>
+ Displays the confirmation fields for the currently selected Subject.
+ </summary>
+</member><member name="M:QM.PDA.Subject.ClearConfirmationFields">
+	<summary>
+ Clears the Confirmation Fields in the Answer Area Panel.
+ </summary>
+</member><member name="M:QM.PDA.Subject.StoreValue">
+	<summary>
+ Store the selected subject.
+ </summary>
+</member><member name="M:QM.PDA.Subject.Validate">
+	<summary>
+ Checks if there is a selected subject.
+ </summary>
+	<returns><c>True</c> if there's a selected subject, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Subject.isIngeger(System.Object)">
+	<summary>
+ Checks if the parameter is parsable to integer.
+ </summary>
+	<param name="o">Object to parse.</param>
+	<returns>True if parsable.</returns>
+	<remarks></remarks>
+</member><member name="P:QM.PDA.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:QM.PDA.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:QM.PDA.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:QM.PDA.Study.CanGoNext">
+	<summary>
+ Check if it is possible to go to the next screen.
+ </summary>
+	<returns><c>True</c> if it is possible, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Study.GoNext">
+	<summary>
+ Stores the value before going to the next screen.
+ </summary>
+</member><member name="M:QM.PDA.Study.GoBack">
+	<summary>
+ Stores the value before going to the previous screen.
+ </summary>
+</member><member name="M:QM.PDA.Study.StoreValue">
+	<summary>
+ Store the selected study.
+ </summary>
+</member><member name="M:QM.PDA.Study.Validate">
+	<summary>
+ Checks if there is a selected study.
+ </summary>
+	<returns><c>True</c> if there's a selected study, <c>False</c> otherwise.</returns>
+</member><member name="T:QM.PDA.Study">
+	<summary>
+ Screen to select the Study the User will work with.
+ </summary>
+</member><member name="T:QM.PDA.Section">
+	<summary>
+ Displays all the available Sections.
+ </summary>
+</member><member name="M:QM.PDA.Action.CanGoNext">
+	<summary>
+ Check if it is possible to go to the next screen.
+ </summary>
+	<returns><c>True</c> if it is possible, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Action.GoNext">
+	<summary>
+ Stores the value before going to the next screen.
+ </summary>
+</member><member name="M:QM.PDA.Action.GoBack">
+	<summary>
+ Stores the value before going to the previous screen.
+ </summary>
+</member><member name="M:QM.PDA.Action.StoreValue">
+	<summary>
+ Store the selected action.
+ </summary>
+</member><member name="M:QM.PDA.Action.Validate">
+	<summary>
+ Checks if there is a selected action.
+ </summary>
+	<returns><c>True</c> if there's a selected action, <c>False</c> otherwise.</returns>
+</member><member name="T:QM.PDA.Action">
+	<summary>
+ Screen to select the Action that the User wants to perform.
+ </summary>
+</member><member name="M:QM.PDA.Site.CanGoNext">
+	<summary>
+ Check if it is possible to go to the next screen.
+ </summary>
+	<returns><c>True</c> if it is possible or <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Site.GoNext">
+	<summary>
+ Stores the value before going to the next screen.
+ </summary>
+</member><member name="M:QM.PDA.Site.GoBack">
+	<summary>
+ Stores the value before going to the previous screen.
+ </summary>
+</member><member name="M:QM.PDA.Site.StoreValue">
+	<summary>
+ Stores the selected site.
+ </summary>
+</member><member name="M:QM.PDA.Site.Validate">
+	<summary>
+ Checks if there is a selected site.
+ </summary>
+	<returns><c>True</c> if there's a selected site, <c>False</c> otherwise.</returns>
+</member><member name="T:QM.PDA.Site">
+	<summary>
+ Screen to select the Site where the User will work.
+ </summary>
+</member><member name="M:QM.PDA.QuestionnaireSet.CanGoNext">
+	<summary>
+ Check if it is possible to go to the next screen.
+ </summary>
+	<returns><c>True</c> if it is possible, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.QuestionnaireSet.GoNext">
+	<summary>
+ Stores the value before going to the next screen.
+ </summary>
+</member><member name="M:QM.PDA.QuestionnaireSet.GoBack">
+	<summary>
+ Stores the value before going to the previous screen.
+ </summary>
+</member><member name="M:QM.PDA.QuestionnaireSet.StoreValue">
+	<summary>
+ Store the selected study.
+ </summary>
+</member><member name="M:QM.PDA.QuestionnaireSet.Validate">
+	<summary>
+ Checks if there is a selected Questionnaire Set.
+ </summary>
+	<returns><c>True</c> if there's a selected Questionnaire Set, <c>False</c> otherwise.</returns>
+</member><member name="T:QM.PDA.QuestionnaireSet">
+	<summary>
+ Screen to select the Questionnaire Set the User will work with.
+ </summary>
+</member><member name="M:QM.PDA.ViCoLogin.CanGoNext">
+	<summary>
+ Checks the username and password
+ </summary>
+	<returns><c>True</c> if valid, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.ViCoLogin.GoNext">
+	<summary>
+ Set the current user
+ </summary>
+</member><member name="T:QM.PDA.ViCoLogin">
+	<summary>
+ Login screen
+ </summary>
+</member>
+</members>
+</doc>

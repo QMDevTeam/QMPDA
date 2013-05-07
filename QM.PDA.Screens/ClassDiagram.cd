@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="QM.PDA.Screens.BaseScreen" Collapsed="true">
+    <Position X="16" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BaseScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAABACAAAACBAAAAAAACAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.QuestionScreen" Collapsed="true">
+    <Position X="13.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\QuestionScreen.vb</FileName>
+      <HashCode>AYFAiACAACCLAAADCgCAAkOCBjAACACADhAAoAABCTE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.CheckBoxScreen" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\CheckBoxScreen.vb</FileName>
+      <HashCode>AAEACAAAACAAAAACAACAAAACJAAAAEAAAAAAgAAIAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.TimeScreen" Collapsed="true">
+    <Position X="15.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\TimeScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.DateScreen" Collapsed="true">
+    <Position X="17.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\DateScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.DateTimeScreen" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\DateTimeScreen.vb</FileName>
+      <HashCode>IAAAAAQAACAAAQQAAACGfwACBAAAAAAAAAAAgAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.DecimalScreen" Collapsed="true">
+    <Position X="20" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\DecimalScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.DropDownScreen" Collapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\DropDownScreen.vb</FileName>
+      <HashCode>AAgAAAAAACAAAAAAAACAAAACBAAAAAAAAAAAgAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.IntegerScreen" Collapsed="true">
+    <Position X="22.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\IntegerScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.NumericScreen" Collapsed="true">
+    <Position X="21.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\NumericScreen.vb</FileName>
+      <HashCode>AAAAAACIAGAIAAAAAASABAAKBAAAIAAIAAABgAAw8B8=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.RadioButtonsScreen" Collapsed="true">
+    <Position X="6.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Question\RadioButtonsScreen.vb</FileName>
+      <HashCode>AAAACAAAACAAAAAAAACAAAACBEAQIAAAAAABggBAAhA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.TextAreaScreen" Collapsed="true">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\TextAreaScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.TextBoxScreen" Collapsed="true">
+    <Position X="13.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\TextBoxScreen.vb</FileName>
+      <HashCode>AAAAAAEAACAAAAAAAACAAAAKBAAAAAAAAAAAgAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Splash.QuestionnaireSplashScreen" Collapsed="true">
+    <Position X="24.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Splash\QuestionnaireSplashScreen.vb</FileName>
+      <HashCode>AAAAAQAAACAAAAAAAACAAAAKAAAAAACAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Splash.SectionSplashScreen" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Splash\SectionSplashScreen.vb</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACIACACAAAAAACAgAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.BaseForm" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BaseForm.vb</FileName>
+      <HashCode>AABAgQACACAKAAAAAACAAJASAAAAgAFAIACAAAgBQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QM.PDA.Screens.Question.NameScreen" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Question\NameScreen.vb</FileName>
+      <HashCode>AAEAIAgEACAAAAAAAACAgEACBAAAAAAAAQIAggACABY=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

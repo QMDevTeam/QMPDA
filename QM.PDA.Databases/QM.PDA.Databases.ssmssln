@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "QM.PDA.Config", "QM.PDA.Config\QM.PDA.Config.ssmssqlproj", "{F43E24EC-DBC2-46D4-AD14-E59972DB10E4}"
+EndProject
+Project("{1FCC92F3-F470-4421-9501-1C6E970181CC}") = "QM.PDA.Config.CE", "QM.PDA.Config.CE\QM.PDA.Config.CE.ssmsmobileproj", "{DF2DF211-E0DA-4FB4-9171-9B1A6E16CB9C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "QM.PDA.Security", "QM.PDA.Security\QM.PDA.Security.ssmssqlproj", "{1D5B8284-33DC-4C67-9E0E-C9C29002C54F}"
+EndProject
+Project("{1FCC92F3-F470-4421-9501-1C6E970181CC}") = "QM.PDA.Security.CE", "QM.PDA.Security.CE\QM.PDA.Security.CE.ssmsmobileproj", "{ABECF639-E4A9-47A2-8DE5-FBE7B31B3912}"
+EndProject
+Project("{1FCC92F3-F470-4421-9501-1C6E970181CC}") = "QM.PDA.Data.CE", "QM.PDA.Data.CE\QM.PDA.Data.CE.ssmsmobileproj", "{8839941B-6C82-4964-9F3E-29F1E6EFEC58}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccProjectName0 = \u0022$/IEIP/ViCo/Código/Visual\u0020Studio\u0020Projects/QuestionnaireMobile/PDA/QM.PDA.Databases\u0022,\u0020UEWAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = QM.PDA.Config\\QM.PDA.Config.ssmssqlproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = QM.PDA.Config\\
+		SccProjectUniqueName2 = QM.PDA.Security.CE\\QM.PDA.Security.CE.ssmsmobileproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = QM.PDA.Security.CE\\
+		SccProjectUniqueName3 = QM.PDA.Security\\QM.PDA.Security.ssmssqlproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = QM.PDA.Security\\
+		SccProjectUniqueName4 = QM.PDA.Config.CE\\QM.PDA.Config.CE.ssmsmobileproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = QM.PDA.Config.CE\\
+		SccProjectUniqueName5 = QM.PDA.Data.CE\\QM.PDA.Data.CE.ssmsmobileproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = QM.PDA.Data.CE\\
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

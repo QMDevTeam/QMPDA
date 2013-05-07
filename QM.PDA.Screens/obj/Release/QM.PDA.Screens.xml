@@ -1,0 +1,291 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+QM.PDA.Screens
+</name>
+</assembly>
+<members>
+<member name="T:QM.PDA.Screens.CanValidateRangeAttribute">
+	<summary>
+ Used to decorate a Screen that provides the ability to validate range limits for the input value.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.Controls.Label2.ResizeToFit">
+	<summary>
+ Resize the control to fit all the text in it.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.Question.NumericScreen.GetTypedUserInput">
+	<summary>
+ Returns the input from the user in an object of the same
+ type than the initial value, if there is an initial value.
+ </summary>
+	<remarks>
+ To keep the same source type is important because the comparison
+ between two objects of different numeric types is not supported
+ so the input from the user must be stored in the same type than
+ it was first stored. This way it can be determined if the initial
+ value has changed.
+ </remarks>
+	<returns>A variable of the same type of the initial value. If there
+ isn't an initial value then returns a variable of type <c>Decimal</c>.
+ If there isn't a user input then returns <c>Nothing</c>.</returns>
+</member><member name="M:QM.PDA.Screens.Common.VariablesParse(System.String)">
+	<summary>
+ Replaces the aperances of variableNames with it's value.
+ </summary>
+	<param name="expresion">Expresion to parse.</param>
+	<returns>The parsed string.</returns>
+	<remarks></remarks>
+</member><member name="T:QM.PDA.Screens.Question.GPSReadingScreen">
+	<summary>
+ Screen to capture a GPS Reading.
+ </summary>
+</member><member name="M:QM.PDA.Screens.Question.NameScreen.VerifyScreenConfiguration">
+	<summary>
+ This screen requires a specific configuration. This
+ function verifies if that configurarion is ok.
+ </summary>
+	<returns><c>True</c> if the confituration is complete, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.NameScreen.Autocomplete(System.Windows.Forms.TextBox@)">
+	<summary>
+ Fills a ListBox with all the posible names, based on the text typed in the TextBox.
+ </summary>
+	<param name="targetTextBox">The TextBox where the autocomplete is going to act.</param>
+</member><member name="T:QM.PDA.Screens.BaseScreen">
+	<summary>
+ Inherits from BaseForm and adds the header. This is the 
+ template for all the screens in a questionnaire.
+ </summary>
+	<remarks><seealso cref="BaseForm"/></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.Timer_Load(System.Object,System.EventArgs)">
+	<summary>
+ Call InitForm when the form is loaded.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.btnStartStop_Click(System.Object,System.EventArgs)">
+	<summary>
+ Start/Stop button.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.btnReset_Click(System.Object,System.EventArgs)">
+	<summary>
+ Resets the screen and counters.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.Timer1_Tick(System.Object,System.EventArgs)">
+	<summary>
+ Calculates time left, refresh the screen.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.uxTimerPart_ValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ When a parameter of the time changes, updates the timer counters.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.TimerScreen_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+	<summary>
+ If the timer is enabled, turns on the close flag.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.InitForm">
+	<summary>
+ Initalize the controls and counters.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.Screens.TimerScreen.DisableForm">
+	<summary>
+ Disables controls in the screen while the timer is running.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:QM.PDA.Screens.BaseForm">
+	<summary>
+ This is the root template to use as a base class for all the
+ forms in the project. Provides a graphic uniformity for a
+ consistent look and feel of the forms. It contains the Next
+ and Back buttons as well as the Main Menu.
+ </summary>
+</member><member name="P:QM.PDA.Screens.Question.QuestionScreen.HasValue">
+	<summary>
+ Indicates if the user has specified some input into the screen.
+ </summary>
+	<returns><c>True</c> if there is input, <c>False</c> otherwise.</returns>
+	<remarks>
+ Every screen derived from Question has to override this Property since
+ it is used to decide if the 'Required' message box should be displayed.
+ </remarks>
+</member><member name="P:QM.PDA.Screens.Question.QuestionScreen.InputValue">
+	<summary>
+ The input from the user.
+ </summary>
+	<returns>An object that implements <c>IComparable</c> containing the input from the user.</returns>
+	<remarks>
+ Every screen derived from Question has to override this Property since
+ it is used store the input from the user to the data base. If the screen
+ is too specialized or includes more than one variable then it has to override
+ the StoreValue method instead.
+ </remarks>
+</member><member name="P:QM.PDA.Screens.Question.QuestionScreen.OriginalValueChanged">
+	<summary>
+ Indicates if the input from the user is different from what was already stored.
+ </summary>
+	<returns><c>True</c> if the input from the user is different from what was already stored,
+ <c>False</c> otherwise.</returns>
+	<remarks>
+ Every screen derived from Question has to override this Property since
+ it is used to decide if the 'Required' message box should be displayed.
+ </remarks>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.CanGoBack">
+	<summary>
+ Indicates if the conditions to go to the previous screen are fulfilled.
+ </summary>
+	<returns><c>True</c> if the conditions are fulfilled,<c>Flase</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.CanGoNext">
+	<summary>
+ Indicates if the conditions to go to the next screen are fulfilled.
+ </summary>
+	<returns><c>True</c> if the conditions are fulfilled,<c>Flase</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.CanInterrupt">
+	<summary>
+ Indicates if the conditions to interrupt the screen secuence are fulfilled.
+ </summary>
+	<returns><c>True</c> if the conditions are fulfilled,<c>Flase</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.GoBack">
+	<summary>
+ Performs the actions needed when the screen goes back.
+ </summary>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.GoNext">
+	<summary>
+ Performs the actions needed when the screen goes next.
+ </summary>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.Interrupt">
+	<summary>
+ Performs the actions needed when the user wants to interrupt the screen secuence.
+ </summary>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.StoreValue">
+	<summary>
+ Stores the user input in the data base.
+ </summary>
+	<remarks>
+ This method can be overridden to do screen specific actions or transformations 
+ for storing the inpunt.
+ </remarks>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ValidateInput">
+	<summary>
+ Validates the user input.
+ </summary>
+	<remarks>
+ This method can be overridden to do screen specific validations.
+ </remarks>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ValidationFailed">
+	<summary>
+ Invoked when the Validate function fails at any point.
+ </summary>
+	<remarks>
+ This method can be overridden to perform screen specific actions when the validation fails.
+ </remarks>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowInputExceptionMessage(System.String)">
+	<summary>
+ Shows the 'Input Exception' message
+ </summary>
+	<param name="message">A message to override the default message.</param>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowRequiredMessage(System.String)">
+	<summary>
+ Shows the 'Required' message box.
+ </summary>
+	<param name="message">A message to override the default message.</param>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowAbsMinMessage(System.Object,System.String)">
+	<summary>
+ Shows a message box telling the user that the input should be greater than a certain limit.
+ </summary>
+	<param name="value">The value for the limit.</param>
+	<param name="message">A message to override the default message.</param>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowAbsMaxMessage(System.Object,System.String)">
+	<summary>
+ Shows a message box telling the user that the input should be lesser than a certain limit.
+ </summary>
+	<param name="value">The value for the limit.</param>
+	<param name="message">A message to override the default message.</param>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowPromptUnderMessage(System.Object,System.String)">
+	<summary>
+ Asks the user to confirm if the entered value is ok.
+ </summary>
+	<param name="value">The value etered by the user.</param>
+	<param name="message">A message to override the default message.</param>
+	<returns><c>True</c> if the user agrees, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowPromptOverMessage(System.Object,System.String)">
+	<summary>
+ Asks the user to confirm if the entered value is ok.
+ </summary>
+	<param name="value">The value etered by the user.</param>
+	<param name="message">A message to override the default message.</param>
+	<returns><c>True</c> if the user agrees, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowConfirmChangeMessage(System.String)">
+	<summary>
+ Asks the user to confirm if it's ok to change the value.
+ </summary>
+	<param name="message">A message to override the default message.</param>
+	<returns><c>True</c> if the user agrees, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowConfirmNextMessage(System.String)">
+	<summary>
+ Asks the user to confirm if it's ok to go to the next screen.
+ </summary>
+	<param name="message">A message to override the default message.</param>
+	<returns><c>True</c> if the user agrees, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ShowConfirmBackMessage(System.String)">
+	<summary>
+ Asks the user to confirm if it's ok to go to the previous screen.
+ </summary>
+	<param name="message">A message to override the default message.</param>
+	<returns><c>True</c> if the user agrees, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.Validate(System.Boolean)">
+	<summary>
+ Performs the basic validations over the user input.
+ </summary>
+	<param name="validateRequiredValue">Indicates if the validation should check if a value is required.</param>
+	<returns><c>True</c> if all the validations are ok, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.CanValidateRange">
+	<summary>
+ Determines if the screen has the ability to validate range limits for the input value.
+ </summary>
+	<returns><c>True</c> if the screen can validate range limits, <c>False</c> otherwise.</returns>
+	<remarks>This method looks for the <c>CanValidateRange</c> attribute, if it is present then
+ the screen can validate range limits.</remarks>
+</member><member name="M:QM.PDA.Screens.Question.QuestionScreen.ValidateRange">
+	<summary>
+ Performs range limits validation.
+ </summary>
+	<returns><c>True</c> if the input value is inside the specified limits, <c>False</c> otherwise.</returns>
+</member><member name="T:QM.PDA.Screens.GPSReading">
+	<summary>
+ Screen to capture a GPS Reading.
+ </summary>
+</member><member name="P:QM.PDA.Screens.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:QM.PDA.Screens.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:QM.PDA.Screens.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

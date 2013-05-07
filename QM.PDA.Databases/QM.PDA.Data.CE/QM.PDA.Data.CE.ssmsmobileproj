@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlCeProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="QM.PDA.Data.CE">
+  <Items>
+    <LogicalFolder Name="Queries" Type="5" Sorted="true">
+      <Items>
+        <FileNode Name="Create Data Table.sqlce">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Create Data Table.sqlce</FullPath>
+        </FileNode>
+        <FileNode Name="Create Subject Table.sqlce">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Create Subject Table.sqlce</FullPath>
+        </FileNode>
+        <FileNode Name="QM.PDA.Data.Create.sqlce">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>QM.PDA.Data.Create.sqlce</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/IEIP/ViCo/Código/Visual Studio Projects/QuestionnaireMobile/PDA/QM.PDA.Databases", UEWAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlCeProject>

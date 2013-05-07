@@ -1,0 +1,325 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+QM.PDA.DA
+</name>
+</assembly>
+<members>
+<member name="M:QM.PDA.DA.Security.GetUser(System.String,System.String)">
+	<summary>
+ Gets a single record with the information of the User object specified.
+ </summary>
+	<param name="PDAUserName">The name of the User.</param>
+	<param name="PDAPassword">The password the User provided.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Security.GetAll">
+	<summary>
+ Gets all the records with the information of the User objets.
+ </summary>
+	<returns>A <c>DataTable</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.Security">
+	<summary>
+ Provides data access to the Security table in the security database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Variable.GetSingle(System.String)">
+	<summary>
+ Gets a single record with the information of the Variable object specified.
+ </summary>
+	<param name="variableName">The name of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.Variable">
+	<summary>
+ Provides data access to the Variable table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Method.GetSingle(System.String)">
+	<summary>
+ Gets a single record with the information of the Method object specified.
+ </summary>
+	<param name="methodName">The name of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.Method">
+	<summary>
+ Provides data access to the Method table in the configuration database.
+ </summary>
+</member><member name="P:QM.PDA.DA.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:QM.PDA.DA.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:QM.PDA.DA.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:QM.PDA.DA.Screen.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the Screen object specified.
+ </summary>
+	<param name="screenID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.Screen">
+	<summary>
+ Provides data access to the Screen table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Transition.GetAll(System.Int32)">
+	<summary>
+ Gets a single record with the information of the Transition object specified.
+ </summary>
+	<param name="screenID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.Transition">
+	<summary>
+ Provides data access to the Transition table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.ProcedureStep.GetAll(System.Int32)">
+	<summary>
+ Gets a single record with the information of the ProcedureStep object specified.
+ </summary>
+	<param name="procedureID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.ProcedureStep">
+	<summary>
+ Provides data access to the ProcedureStep table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Section.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the Section object specified.
+ </summary>
+	<param name="sectionID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Section.GetAll(System.Int32)">
+	<summary>
+ Gets all the records with the information of the Section objets that belongs to a
+ specified Questionnaire.
+ </summary>
+	<param name="questionnaireID">The unique identifier of the Questionnaire.</param>
+	<returns>A <c>DataTable</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.Section">
+	<summary>
+ Provides data access to the Section table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.QuestionnaireSet.GetAll">
+	<summary>
+ Gets all the records with the information of the Questionnaire Set objets that belongs to
+ the Study.
+ </summary>
+	<returns>A <c>SqlCeResultSet</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.QuestionnaireSet">
+	<summary>
+ Provides data access to the QuestionnaireSet table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Data.CreateRecord(System.String,System.Guid,System.Nullable{System.Byte},System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates a record in the specified data table.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="subjectID">The unique identifier of the Subject to which this record belongs to.</param>
+	<param name="subjectQuestionnaireInstanceID">The Questionnaire Instance identifier.</param>
+	<param name="initialValues">The initial values for the NOT NULL columns.</param>
+	<param name="user">The name of the User creating this record.</param>
+	<param name="version">The version of the Study to which this record belongs to.</param>
+	<param name="PDASerialNumber">The Serial Number of the PDA that is being used.</param>
+	<param name="PDAName">The Name of the PDA that is being used.</param>
+</member><member name="M:QM.PDA.DA.Data.UpdateRecord(System.String,System.Guid,System.Nullable{System.Byte},System.String,System.Object,System.String,System.String,System.String,System.String)">
+	<summary>
+ Updates a record in the specified data table.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="subjectID">The unique identifier of the Subject to which this record belongs to.</param>
+	<param name="subjectQuestionnaireInstanceID">The Questionnaire Instance identifier.</param>
+	<param name="fieldName">The name of the field to update.</param>
+	<param name="fieldValue">The value of the field to update.</param>
+	<param name="user">The name of the User updating this record.</param>
+	<param name="version">The version of the Study to which this record belongs to.</param>
+	<param name="PDASerialNumber">The Serial Number of the PDA that is being used.</param>
+	<param name="PDAName">The Name of the PDA that is being used.</param>
+</member><member name="M:QM.PDA.DA.Data.GetRecord(System.String,System.Guid,System.Nullable{System.Byte})">
+	<summary>
+ Gets a record from the specified data table.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="subjectID">The unique identifier of the Subject to which the record belongs.</param>
+	<param name="subjectQuestionnaireInstanceID">The Questionnaire Instance identifier.</param>
+	<returns>A <c>DataRow</c> with the record if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Data.GetRecord(System.String,System.String)">
+	<summary>
+ Gets a record from the specified data table.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="SASubjectID">The Study Assigned ID of the Subject that owns the record.</param>
+	<returns>A <c>DataRow</c> with the record if it was found, <c>Nothing</c> otherwise.</returns>
+	<remarks>This overload uses the Study Assigned Subject ID instead of the unique Subject ID.</remarks>
+</member><member name="M:QM.PDA.DA.Data.GetRecords(System.String,System.String[],System.String,System.String[],QM.PDA.DA.Data.SortDirection)">
+	<summary>
+ Gets a set of records from the specified data table.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="fields">The list of fields to select from the data table.</param>
+	<param name="filter">Filter expresion in SQL syntax.</param>
+	<param name="sortFields">The list of fields on which to sort the set of records.</param>
+	<param name="sortDirection">The direction of the sorting.</param>
+	<returns>A <c>DataTable</c> with the records.</returns>
+</member><member name="M:QM.PDA.DA.Data.RecordExists(System.String,System.Guid,System.Nullable{System.Byte})">
+	<summary>
+ Checks if a record for the specified Subject exists.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="subjectID">The unique identifier of the Subject to which the record belongs.</param>
+	<param name="subjectQuestionnaireInstanceID">The Questionnaire Instance identifier.</param>
+	<returns><c>True</c> if the a record exists, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Data.RecordExists(System.String,System.String)">
+	<summary>
+ Checks if a record for the specified Subject exists.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="SASubjectID">The Study Assigned ID of the Subject that owns the record.</param>
+	<returns><c>True</c> if the a record exists, <c>False</c> otherwise.</returns>
+	<remarks>This overload uses the Study Assigned Subject ID instead of the unique Subject ID.</remarks>
+</member><member name="M:QM.PDA.DA.Data.DeleteRecord(System.String,System.Guid,System.Nullable{System.Byte})">
+	<summary>
+ Deletes the specified record.
+ </summary>
+	<param name="dataTableName">The name of the data table.</param>
+	<param name="subjectID">The unique identifier of the Subject to which the record belongs.</param>
+	<param name="subjectQuestionnaireInstanceID">The Questionnaire Instance identifier.</param>
+</member><member name="M:QM.PDA.DA.Data.ExecuteQuery(System.String)">
+	<summary>
+ Executes a SQL Command that returns a table.
+ </summary>
+	<param name="commandText">The SQL Command to execute.</param>
+	<returns>A DataTable with the selected Rows.</returns>
+</member><member name="M:QM.PDA.DA.Data.ExecuteNonQuery(System.String)">
+	<summary>
+ Executes a SQL Command that does not return a table.
+ </summary>
+	<param name="commandText">The SQL Command to execute.</param>
+	<returns>The number of rows affected by the SQL Command.</returns>
+</member><member name="M:QM.PDA.DA.Data.ExecuteScalar(System.String)">
+	<summary>
+ Executes a SQL Query and returns the value in the first column of the first row
+ of the resulting table.
+ </summary>
+	<param name="commandText">The SQL Command to execute.</param>
+	<returns>The value in the first column of the first row of the resulting table.</returns>
+</member><member name="T:QM.PDA.DA.Data">
+	<summary>
+ Provides data access services for the Data database.
+ </summary>
+</member><member name="M:QM.PDA.DA.ScreenTemplate.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the ScreenTemplate object specified.
+ </summary>
+	<param name="screenTemplateID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.ScreenTemplate">
+	<summary>
+ Provides data access to the ScreenTemplate table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Site.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the Site object specified.
+ </summary>
+	<param name="siteID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Site.Exists(System.Int32)">
+	<summary>
+ Checks if a Site object with the specified identifier exists.
+ </summary>
+	<param name="siteID">The unique identifier of the object in the database.</param>
+	<returns><c>True</c> if the a record exists, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Site.GetAll">
+	<summary>
+ Gets all the records with the information of the Site objets.
+ </summary>
+	<returns>A <c>DataTable</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.Site">
+	<summary>
+ Provides data access to the Site table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.DotNETClass.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the DotNETClass object specified.
+ </summary>
+	<param name="dotNETClassID">The unique identifier of the object in the database.</param>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.DotNETClass">
+	<summary>
+ Provides data access to the DotNETClass table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.Questionnaire.GetSingle(System.Int32)">
+	<summary>
+ Gets a single record with the information of the Questionnaire object specified.
+ </summary>
+	<param name="questionnaireID">The unique identifier of the object in the database.</param>
+	<returns>A <c>SqlCeResultSet</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.DA.Questionnaire.GetAll(System.Int32)">
+	<summary>
+ Gets all the records with the information of the Questionnaire objets that belongs to a
+ specified Questionnaire Set.
+ </summary>
+	<param name="questionnaireSetID">The unique identifier of the Questionnaire Set.</param>
+	<returns>A <c>SqlCeResultSet</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.Questionnaire">
+	<summary>
+ Provides data access to the Questionnaire table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.StudyTable.GetSingle(System.String)">
+	<summary>
+ Gets a single record with the information of the Study object.
+ </summary>
+	<returns>A <c>DataRow</c> with the information of the object if it was found, <c>Nothing</c> otherwise.</returns>
+</member><member name="T:QM.PDA.DA.StudyTable">
+	<summary>
+ Provides data access to the Study table in the configuration database.
+ </summary>
+</member><member name="M:QM.PDA.DA.StudyRegistry.GetAll">
+	<summary>
+ Gets a DataTable with the information of the Studies registered in the device Registry
+ </summary>
+	<returns>A <c>DataTable</c> with all the records found.</returns>
+</member><member name="T:QM.PDA.DA.StudyRegistry">
+	<summary>
+ Provides data access to the HKLM\Software\QM\Studies Registry Key
+ </summary>
+</member><member name="M:QM.PDA.DA.Common.Init(System.String,System.String,System.String)">
+	<summary>
+ Initializes the database connections to be used.
+ </summary>
+	<param name="securityFile">The path to the Security File.</param>
+	<param name="configFile">The path to the Configuration File.</param>
+	<param name="dataFile">The path to the Data File.</param>
+</member><member name="M:QM.PDA.DA.Common.GetLegalValueTableItem(System.String,System.Int32)">
+	<summary>
+ Gets the items in a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="value">The value of the item to retrieve.</param>
+	<returns>A <c>DataRow</c> with the Legal Value Table Item.</returns>
+</member><member name="M:QM.PDA.DA.Common.GetLegalValueTableItems(System.String,System.String)">
+	<summary>
+ Gets one item in a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="group">The group of items to retrieve.</param>
+	<returns>A <c>DataTable</c> with the Legal Value Table items.</returns>
+</member><member name="M:QM.PDA.DA.Common.InsertLegalValueTableItem(System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Inserts a new item into a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="value">The Value for the new item.</param>
+	<param name="order">The Order for the new item.</param>
+	<param name="text">The Text for the new item.</param>
+	<param name="shortName">The Short Name for the new item.</param>
+	<param name="group">The Group for the new item.</param>
+</member><member name="T:QM.PDA.DA.Common">
+	<summary>
+ Provides general purpose data access functions and conection strings constants.
+ </summary>
+</member>
+</members>
+</doc>

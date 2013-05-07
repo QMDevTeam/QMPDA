@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>QM.PDA.Screens</RootNamespace>
+    <AssemblyName>QM.PDA.Screens</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.01</OSVersion>
+    <MyType>Windows</MyType>
+    <DeployDirSuffix>QM</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <OptionStrict>On</OptionStrict>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <DeployDirPrefix>\</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>QM.PDA.Screens.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>QM.PDA.Screens.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Samples.Location, Version=1.0.3373.27268, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="OpenNETCF.Drawing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL" />
+    <Reference Include="OpenNETCF.Windows.Forms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CanValidateRangeAttribute.vb" />
+    <Compile Include="BaseForm.Designer.vb">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common.vb" />
+    <Compile Include="BaseScreen.Designer.vb">
+      <DependentUpon>BaseScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Label2.Designer.vb">
+      <DependentUpon>Label2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Label2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Exit\SectionExitScreen.Designer.vb">
+      <DependentUpon>SectionExitScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Exit\SectionExitScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResult.vb" />
+    <Compile Include="Info\SimpleInfoScreen.Designer.vb">
+      <DependentUpon>SimpleInfoScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Info\SimpleInfoScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Question\CheckBoxScreen.Designer.vb">
+      <DependentUpon>CheckBoxScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\CheckBoxScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\GridScreen.Designer.vb">
+      <DependentUpon>GridScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\GridScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\DateScreen.Designer.vb">
+      <DependentUpon>DateScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\DateScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\DateTimeScreen.Designer.vb">
+      <DependentUpon>DateTimeScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\DateTimeScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\DecimalScreen.Designer.vb">
+      <DependentUpon>DecimalScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\DecimalScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\DropDownScreen.Designer.vb">
+      <DependentUpon>DropDownScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\DropDownScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\GPSReadingScreen.Designer.vb">
+      <DependentUpon>GPSReadingScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\GPSReadingScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\IntegerScreen.Designer.vb">
+      <DependentUpon>IntegerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\IntegerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\NameScreen.Designer.vb">
+      <DependentUpon>NameScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\NameScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\NumericScreen.Designer.vb">
+      <DependentUpon>NumericScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\NumericScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\QuestionScreen.Designer.vb">
+      <DependentUpon>QuestionScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\QuestionScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\RadioButtonsScreen.Designer.vb">
+      <DependentUpon>RadioButtonsScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\RadioButtonsScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\TextAreaScreen.Designer.vb">
+      <DependentUpon>TextAreaScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\TextAreaScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\TextBoxScreen.Designer.vb">
+      <DependentUpon>TextBoxScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\TextBoxScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\TimeScreen.Designer.vb">
+      <DependentUpon>TimeScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Question\TimeScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SimpleReport.Designer.vb">
+      <DependentUpon>SimpleReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SimpleReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources.en.Designer.vb">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ScreenHeader.Designer.vb">
+      <DependentUpon>ScreenHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenHeader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sound.vb" />
+    <Compile Include="Splash\QuestionnaireSplashScreen.Designer.vb">
+      <DependentUpon>QuestionnaireSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\QuestionnaireSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\SectionSplashScreen.Designer.vb">
+      <DependentUpon>SectionSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\SectionSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CorrectDateTime.Designer.vb">
+      <DependentUpon>CorrectDateTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CorrectDateTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\GPSReading.Designer.vb">
+      <DependentUpon>GPSReading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\GPSReading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\TimerScreen.Designer.vb">
+      <DependentUpon>TimerScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TimerScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Label2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exit\SectionExitScreen.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SectionExitScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exit\SectionExitScreen.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SectionExitScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exit\SectionExitScreen.resx">
+      <DependentUpon>SectionExitScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info\SimpleInfoScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleInfoScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\CheckBoxScreen.resx">
+      <DependentUpon>CheckBoxScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\GPSReadingScreen.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GPSReadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\GPSReadingScreen.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GPSReadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\GridScreen.resx">
+      <DependentUpon>GridScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\DateScreen.resx">
+      <DependentUpon>DateScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\DateTimeScreen.resx">
+      <DependentUpon>DateTimeScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\DecimalScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DecimalScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\DropDownScreen.resx">
+      <DependentUpon>DropDownScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\GPSReadingScreen.resx">
+      <DependentUpon>GPSReadingScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\IntegerScreen.resx">
+      <DependentUpon>IntegerScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\NameScreen.resx">
+      <DependentUpon>NameScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\NumericScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NumericScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\QuestionScreen.resx">
+      <DependentUpon>QuestionScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\RadioButtonsScreen.resx">
+      <DependentUpon>RadioButtonsScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\TextAreaScreen.resx">
+      <DependentUpon>TextAreaScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\TextBoxScreen.resx">
+      <DependentUpon>TextBoxScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\TimeScreen.resx">
+      <DependentUpon>TimeScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SimpleReport.resx">
+      <DependentUpon>SimpleReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.en.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenHeader.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScreenHeader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\QuestionnaireSplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionnaireSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\SectionSplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SectionSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CorrectDateTime.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CorrectDateTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CorrectDateTime.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CorrectDateTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CorrectDateTime.resx">
+      <DependentUpon>CorrectDateTime.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\GPSReading.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GPSReading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\GPSReading.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GPSReading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\GPSReading.resx">
+      <DependentUpon>GPSReading.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TimerScreen.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimerScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TimerScreen.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimerScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TimerScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimerScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QM.PDA.BO\QM.PDA.BO.vbproj">
+      <Project>{6B66BD69-A264-4A14-9D3F-7D987724F57B}</Project>
+      <Name>QM.PDA.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QM.PDA.DA\QM.PDA.DA.vbproj">
+      <Project>{CC6C8939-A3B4-4AD9-870F-FACAD0EDF140}</Project>
+      <Name>QM.PDA.DA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="DesignTimeAttributes.xmta" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLs\Microsoft.WindowsMobile.Samples.Location.dll" />
+    <Content Include="Images\WM Close.bmp" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

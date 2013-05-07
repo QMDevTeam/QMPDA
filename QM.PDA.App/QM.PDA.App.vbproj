@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50BCC40C-4520-4373-B154-09AA707D3D16}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>QM.PDA</RootNamespace>
+    <AssemblyName>QM.PDA.App</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.01</OSVersion>
+    <MyType>WindowsForms</MyType>
+    <DeployDirSuffix>QM</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <OptionStrict>On</OptionStrict>
+    <DeployDirPrefix>\</DeployDirPrefix>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>QM.PDA.App.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>QM.PDA.App.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="QM.PDA" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blank.Designer.vb">
+      <DependentUpon>Blank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportList.Designer.vb">
+      <DependentUpon>ReportList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionnaireInstance.Designer.vb">
+      <DependentUpon>QuestionnaireInstance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionnaireInstance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionnaireSet.Designer.vb">
+      <DependentUpon>QuestionnaireSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionnaireSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iPAQUtil.vb" />
+    <Compile Include="Questionnaire.Designer.vb">
+      <DependentUpon>Questionnaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Questionnaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources.en.Designer.vb">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Section.Designer.vb">
+      <DependentUpon>Section.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Section.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subject.Designer.vb">
+      <DependentUpon>Subject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViCoLogin.Designer.vb">
+      <DependentUpon>ViCoLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViCoLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Designer.vb">
+      <DependentUpon>Site.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Site.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Study.Designer.vb">
+      <DependentUpon>Study.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Study.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action.Designer.vb">
+      <DependentUpon>Action.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Action.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Action.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Action.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Action.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blank.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Blank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blank.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Blank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blank.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Blank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionnaire.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Questionnaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionnaire.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Questionnaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireInstance.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionnaireInstance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireInstance.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionnaireInstance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireSet.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionnaireSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireSet.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionnaireSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportList.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportList.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportList.resx">
+      <DependentUpon>ReportList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireInstance.resx">
+      <DependentUpon>QuestionnaireInstance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionnaireSet.resx">
+      <DependentUpon>QuestionnaireSet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionnaire.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Questionnaire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.en.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Section.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Section.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Section.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Site.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Site.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Site.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Site.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Study.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Study.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Study.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Study.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Subject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Subject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Subject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViCoLogin.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViCoLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViCoLogin.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViCoLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViCoLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViCoLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Site.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Site.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Study.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Study.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Action.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QM.PDA.BO\QM.PDA.BO.vbproj">
+      <Project>{6B66BD69-A264-4A14-9D3F-7D987724F57B}</Project>
+      <Name>QM.PDA.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QM.PDA.Screens\QM.PDA.Screens.vbproj">
+      <Project>{DBC6DE47-27B7-46C8-B62B-B33E731E5E15}</Project>
+      <Name>QM.PDA.Screens</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

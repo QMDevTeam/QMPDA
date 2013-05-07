@@ -1,0 +1,16 @@
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\bin\Debug\QM.PDA.DA.dll
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\bin\Debug\QM.PDA.DA.pdb
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\bin\Debug\QM.PDA.DA.xml
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\bin\Debug\System.Data.SqlServerCe.dll
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\ResolveAssemblyReference.cache
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\QM.PDA.DA.Resources.resources
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\QM.PDA.DA.vbproj.GenerateResource.Cache
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\QM.PDA.DA.dll
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\QM.PDA.DA.xml
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Release\QM.PDA.DA.pdb
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\ResolveAssemblyReference.cache
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\QM.PDA.DA.Resources.resources
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\QM.PDA.DA.vbproj.GenerateResource.Cache
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\QM.PDA.DA.dll
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\QM.PDA.DA.xml
+C:\PROYECTOS\IEIP\Software\Código\QuestionnaireMobile\PDA\root\QM.PDA.DA\obj\Debug\QM.PDA.DA.pdb

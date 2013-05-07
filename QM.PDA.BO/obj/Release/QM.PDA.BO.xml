@@ -1,0 +1,482 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+QM.PDA.BO
+</name>
+</assembly>
+<members>
+<member name="M:QM.PDA.BO.QuestionnaireSet.GetAll">
+	<summary>
+ Gets all the Questionnaire Sets of the Study.
+ </summary>
+	<returns>A <c>List(Of QuestionnaireSet)</c> with all the Questionnaire Sets of the Study.</returns>
+</member><member name="M:QM.PDA.BO.QuestionnaireSet.GetAllValid">
+	<summary>
+ Gets all the Questionnaire Sets of the Study that fulfills their Precondition.
+ </summary>
+	<returns>A <c>List(Of QuestionnaireSet)</c> with all the Questionnaire Sets of the Study that fulfills their Precondition.</returns>
+</member><member name="M:QM.PDA.BO.QuestionnaireSet.PopulateProperties(System.Object[])">
+	<summary>
+ Sets the properties values
+ </summary>
+	<param name="properties">The array of type <c>Object</c> with the values for the properties.</param>
+</member><member name="T:QM.PDA.BO.QuestionnaireSet">
+	<summary>
+ Represents a Questionnaire Set.
+ </summary>
+</member><member name="M:QM.PDA.BO.Engine.Start">
+	<summary>
+ Performes initialization tasks.
+ </summary>
+</member><member name="M:QM.PDA.BO.Engine.Finish(System.Boolean)">
+	<summary>
+ Performes finalization tasks.
+ </summary>
+	<param name="sequenceInterrupted">Indicates if the sequence ended due to an interruption.</param>
+</member><member name="M:QM.PDA.BO.Engine.GoToNextScreen">
+	<summary>
+ Sets the next <c>Screen</c>
+	</summary>
+</member><member name="M:QM.PDA.BO.Engine.GoToPreviousScreen">
+	<summary>
+ Gets the previous <c>Screen</c>
+	</summary>
+</member><member name="M:QM.PDA.BO.Engine.GetNextScreen(QM.PDA.BO.Screen)">
+	<summary>
+ Determinates the next screen transition
+ </summary>
+	<param name="Screen">The current <c>Screen</c>.</param>
+	<returns>A <c>Screen</c> if there is a suitable transition, <c>Nothing</c> otherwise.</returns>
+</member><member name="M:QM.PDA.BO.Engine.StoreScreenStack">
+	<summary>
+ Stores the contents of the Screen stack for the Current Subject
+ </summary>
+</member><member name="T:QM.PDA.BO.Engine">
+	<summary>
+ Evaluates the current screen to determinate
+ the previous or next screen.
+ </summary>
+</member><member name="M:QM.PDA.BO.ScreenTemplate.#ctor(System.Int32)">
+	<summary>
+ Set the properties values if the screen template id is correct
+ </summary>
+	<param name="screenTemplateID">the screen template id</param>
+</member><member name="M:QM.PDA.BO.ScreenTemplate.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Assing the properties values
+ </summary>
+	<param name="row">DataRow with the values</param>
+</member><member name="T:QM.PDA.BO.ScreenTemplate">
+	<summary>
+ Gets the address of the screen
+ </summary>
+</member><member name="M:QM.PDA.BO.Method.#ctor(System.String)">
+	<summary>
+ Creates an instance based on the unique Method name provided.
+ </summary>
+	<param name="methodName">The unique name of the Method to instanciate.</param>
+</member><member name="M:QM.PDA.BO.Method.#ctor(System.Data.DataRow)">
+	<summary>
+ Creates an instance using the information contained in the data row provided.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="M:QM.PDA.BO.Method.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the object's properties.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="T:QM.PDA.BO.Method">
+	<summary>
+ Represents a Method with .NET code that can be invoked
+ to performe actions in the different extensibility points
+ of a Questionnaire.
+ </summary>
+</member><member name="M:QM.PDA.BO.Screen.#ctor(System.Int32)">
+	<summary>
+ Creates an instance based on the identifier provided.
+ </summary>
+	<param name="screenID">The unique identifier of the Screen object to instanciate.</param>
+</member><member name="M:QM.PDA.BO.Screen.GetLegalValueTableItems">
+	<summary>
+ Gets a table with the items in the Legal Value Table for this Screen.
+ </summary>
+	<returns>A <c>DataTable</c> with the items in the Legal Value Table.</returns>
+</member><member name="M:QM.PDA.BO.Screen.InsertLegalValueTableItem(System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Inserts a new item into a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="value">The Value for the new item.</param>
+	<param name="order">The Order for the new item.</param>
+	<param name="text">The Text for the new item.</param>
+	<param name="shortName">The Short Name for the new item.</param>
+	<param name="group">The Group for the new item.</param>
+</member><member name="M:QM.PDA.BO.Screen.GetInitialValue">
+	<summary>
+ Gets the value of the Variable that this Screen access.
+ </summary>
+	<returns>An <c>Object</c> if there is a value,<c>Nothing</c> otherwise.</returns>
+	<remarks>This overload uses the Variable asigned to this Screen.</remarks>
+</member><member name="M:QM.PDA.BO.Screen.GetInitialValue(System.String)">
+	<summary>
+ Gets the value of the specified Variable.
+ </summary>
+	<param name="variableName">The name of the variable.</param>
+	<returns>An <c>Object</c> if there is a value,<c>Nothing</c> otherwise.</returns>
+	<remarks>If there is no Variable assigned to this Screen, this method will return <c>Nothing</c>.</remarks>
+</member><member name="M:QM.PDA.BO.Screen.StoreValue(System.Object)">
+	<summary>
+ Stores the value that the user provided in the Variable that this Screen access.
+ </summary>
+	<param name="value">The value to store in the Variable.</param>
+	<remarks>This overload uses the Variable asigned to this Screen.</remarks>
+</member><member name="M:QM.PDA.BO.Screen.StoreValue(System.String,System.Object)">
+	<summary>
+ Stores the value that the user provided in the specified Variable.
+ </summary>
+	<param name="variableName">The name of the Variable.</param>
+	<param name="value">The value to store in the Variable.</param>
+	<remarks>This overload determines the location of the Variable using the Screen settings.</remarks>
+</member><member name="M:QM.PDA.BO.Screen.EvaluateExternalValidation(System.Object)">
+	<summary>
+ Evaluates the External Validation and returns the result.
+ </summary>
+	<param name="inputValue">The user input in the Screen.</param>
+	<returns>The result of the evaluation of the External Validation.</returns>
+</member><member name="M:QM.PDA.BO.Screen.#ctor(System.Data.DataRow)">
+	<summary>
+ Creates an instance using the information contained in the data row provided.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="M:QM.PDA.BO.Screen.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the object's properties.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="T:QM.PDA.BO.Screen">
+	<summary>
+ Represents a Screen to be displayed in a Questionnaire.
+ Provides access to the properties and methods that rule
+ the behavior of the Screen.
+ </summary>
+</member><member name="T:QM.PDA.BO.Context">
+	<summary>
+ Provides access to the current state of the application.
+ </summary>
+</member><member name="F:QM.PDA.BO.Evaluator.classes">
+	<summary>
+ Hash table to use as cache for the classes.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.BO.Evaluator.EvaluateCondition(System.String,System.Object[])">
+	<summary>
+ Locates and executes the specified Method.
+ </summary>
+	<returns>The logical (true/false) result of the evaluation.</returns>
+</member><member name="T:QM.PDA.BO.Evaluator">
+	<summary>
+ Performes evaluations of logical conditions (true/false).
+ </summary>
+	<remarks>The conditions should be written in a .NET static method
+ (Shared in VB) that receives no parameters and returns a boolean
+ result (Boolean in VB).</remarks>
+</member><member name="M:QM.PDA.BO.Variable.#ctor(System.String)">
+	<summary>
+ Obtains and sets the properties values of a variable
+ </summary>
+	<param name="variableName">Name of the variable</param>
+</member><member name="M:QM.PDA.BO.Variable.Exists(System.String)">
+	<summary>
+ Indicates if a Variable with the specified identifier exists.
+ </summary>
+	<param name="variableName">Name of the variable</param>
+	<returns><c>True</c> if the variable exists, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.BO.Variable.#ctor(System.Data.DataRow)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="row"></param>
+</member><member name="M:QM.PDA.BO.Variable.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the propierties values
+ </summary>
+	<param name="row">DataRow with all the data</param>
+</member><member name="T:QM.PDA.BO.Variable">
+	<summary>
+ Sets a variable values
+ </summary>
+</member><member name="P:QM.PDA.BO.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:QM.PDA.BO.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:QM.PDA.BO.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:QM.PDA.BO.QuestionnaireInstance.GetAll(QM.PDA.BO.Questionnaire,System.String)">
+	<summary>
+ Gets all the Instances of the specified Questionnaire.
+ </summary>
+	<param name="questionnaire">The owner of the instances.</param>
+	<param name="questionnareDataTableName">The name of the data table for the Questionnaire.</param>
+	<returns>A <c>List(Of QuestionnaireInstance)</c> with all the Instances of the Questionnaire.</returns>
+	<remarks>The resulting list might be empty but will never be <c>Null</c>.</remarks>
+</member><member name="M:QM.PDA.BO.QuestionnaireInstance.PopulateProperties(QM.PDA.BO.Questionnaire,System.Data.DataRow)">
+	<summary>
+ Sets the values for the properties of this object.
+ </summary>
+	<param name="questionnaire">The owner of this object.</param>
+	<param name="row">A <c>DataRow</c> with the object properties.</param>
+</member><member name="T:QM.PDA.BO.QuestionnaireInstance">
+	<summary>
+ Represents a Questionnaire Instance.
+ </summary>
+</member><member name="M:QM.PDA.BO.DotNETClass.#ctor(System.Int32)">
+	<summary>
+ Creates an instance based on the identifier provided.
+ </summary>
+	<param name="dotNETClassID">The unique identifier of the DotNETClass object to instanciate.</param>
+</member><member name="M:QM.PDA.BO.DotNETClass.#ctor(System.Data.DataRow)">
+	<summary>
+ Creates an instance using the information contained in the data row provided.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="M:QM.PDA.BO.DotNETClass.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the object's properties.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the information of the object.</param>
+</member><member name="T:QM.PDA.BO.DotNETClass">
+	<summary>
+ Represents a .NET Class and contains information to create
+ an instance of the class.
+ </summary>
+</member><member name="T:QM.PDA.BO.Report">
+	<summary>
+ Represents a Report.
+ </summary>
+</member><member name="M:QM.PDA.BO.ProcedureStep.Execute">
+	<summary>
+ Executes this Procedure Step.
+ </summary>
+</member><member name="M:QM.PDA.BO.ProcedureStep.GetAll(System.Int32)">
+	<summary>
+ Gets a list of all the Procedure Steps of a specified Procedure.
+ </summary>
+	<param name="procedureID">The unique identifier of the Procedure.</param>
+	<returns>A <c>List</c> of <c>ProcedureStep</c> objects.</returns>
+</member><member name="M:QM.PDA.BO.ProcedureStep.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Inicializates the properties values
+ </summary>
+	<param name="row">Is the DataRow with all the values</param>
+</member><member name="T:QM.PDA.BO.ProcedureStep">
+	<summary>
+ Represents a single step of a Procedure.
+ </summary>
+</member><member name="F:QM.PDA.BO.Procedure.classes">
+	<summary>
+ Hash table to use as cache for the classes.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.BO.Procedure.Execute(System.Int32)">
+	<summary>
+ Execute the specified Procedure.
+ </summary>
+	<param name="procedureID">The unique identifier of the Procedure to execute.</param>
+</member><member name="M:QM.PDA.BO.Procedure.Execute(System.String,System.String,System.Object[])">
+	<summary>
+ Execute the specified Procedure.
+ </summary>
+	<param name="dotNetclassName">Name of the class containing the method.</param>
+	<param name="methodName">The name of the method within the class.</param>
+	<param name="parameters">Parameters of the method.</param>
+	<remarks></remarks>
+</member><member name="T:QM.PDA.BO.Procedure">
+	<summary>
+ Represents a Procedure or Action to perform.
+ </summary>
+</member><member name="M:QM.PDA.BO.Transition.GetAll(System.Int32)">
+	<summary>
+ Get all the transitions a specific screen can have
+ </summary>
+	<param name="screenID">Is the screen id</param>
+	<returns>A <c>List</c> of screen transitions</returns>
+</member><member name="M:QM.PDA.BO.Transition.EvaluateCondition">
+	<summary>
+ Evaluates the OnValidateCondition and returns the result.
+ </summary>
+	<returns>The result of the evaluation of OnValidateCondition.</returns>
+</member><member name="M:QM.PDA.BO.Transition.#ctor(System.Data.DataRow)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="row">DataRow with all the information</param>
+</member><member name="M:QM.PDA.BO.Transition.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the properties values
+ </summary>
+	<param name="row">DataRow with all the information</param>
+</member><member name="T:QM.PDA.BO.Transition">
+	<summary>
+ Gets the transitions a screen can have
+ </summary>
+</member><member name="M:QM.PDA.BO.Study.#ctor(System.Data.DataRow)">
+	<summary>
+ Initializes a new instance of the Study class.
+ </summary>
+	<param name="registryRow">A <c>DataRow</c> with the Study properties from the Registry.</param>
+</member><member name="M:QM.PDA.BO.Study.PopulateRegistryProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the properties of this instance of a Study.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the Study properties from the Registry.</param>
+</member><member name="M:QM.PDA.BO.Study.PopulateDatabaseProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the properties of this instance of a Study.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the Study properties from the Database.</param>
+</member><member name="T:QM.PDA.BO.Study">
+	<summary>
+ Represents a Study.
+ </summary>
+</member><member name="M:QM.PDA.BO.Common.GetLegalValueTableItem(System.String,System.Int32)">
+	<summary>
+ Gets the items in a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="value">The value of the item to retrieve.</param>
+	<returns>A <c>DataRow</c> with the Legal Value Table Item.</returns>
+</member><member name="M:QM.PDA.BO.Common.GetLegalValueTableItems(System.String,System.String)">
+	<summary>
+ Gets one item in a Legal Value Table.
+ </summary>
+	<param name="table">The name of the Legal Value Table.</param>
+	<param name="group">The group of items to retrieve.</param>
+	<returns>A <c>DataTable</c> with the Legal Value Table items.</returns>
+</member><member name="T:QM.PDA.BO.Common">
+	<summary>
+ Provides general purpose data access functions and conection strings constants.
+ </summary>
+</member><member name="T:QM.PDA.BO.Subject">
+	<summary>
+ Represents the Subject of a Study.
+ </summary>
+</member><member name="M:QM.PDA.BO.Site.#ctor(System.Int32)">
+	<summary>
+ Construct when the site already exist
+ </summary>
+	<param name="siteID">The site id</param>
+</member><member name="M:QM.PDA.BO.Site.Exists(System.Int32)">
+	<summary>
+ Indicates if a Site with the specified identifier exists.
+ </summary>
+	<param name="siteID">The site id</param>
+	<returns><c>True</c> if the a record exists, <c>False</c> otherwise.</returns>
+</member><member name="M:QM.PDA.BO.Site.#ctor(System.Data.DataRow)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="row">DataRow with the site's information</param>
+</member><member name="M:QM.PDA.BO.Site.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the properties values
+ </summary>
+	<param name="row">DataRow with the information</param>
+</member><member name="T:QM.PDA.BO.Site">
+	<summary>
+ Class that handels the information from the sites
+ </summary>
+</member><member name="M:QM.PDA.BO.Questionnaire.#ctor(System.Int32)">
+	<summary>
+ Creates an instance based on the identifier provided.
+ </summary>
+	<param name="questionnaireID">The identifier of the Questionnaire to instanciate.</param>
+</member><member name="M:QM.PDA.BO.Questionnaire.GetAll(System.Int32)">
+	<summary>
+ Gets all the Questionnaires of the specified Questionnaire Set.
+ </summary>
+	<param name="questionnaireSetID">The unique identifier of the Questionnaire Set to which the Questionnaires belongs to.</param>
+	<returns>A <c>List(Of Questionnaire)</c> with all the Questionnaires of the Questionnaire Set.</returns>
+</member><member name="M:QM.PDA.BO.Questionnaire.GetAllValid(System.Int32)">
+	<summary>
+ Gets all the Questionnaires of the specified Questionnaire Set that fulfills their Precondition.
+ </summary>
+	<param name="questionnaireSetID">The unique identifier of the Questionnaire Set to which the Questionnaires belongs to.</param>
+	<returns>A <c>List(Of Questionnaire)</c> with all the Questionnaires of the Questionnaire Set that fulfills their Precondition.</returns>
+</member><member name="M:QM.PDA.BO.Questionnaire.PopulateProperties(System.Object[])">
+	<summary>
+ Sets the values of the properties.
+ </summary>
+	<param name="properties">The array of type <c>Object</c> with the values to populate the properties.</param>
+</member><member name="T:QM.PDA.BO.Questionnaire">
+	<summary>
+ Represents a Questionnaire of a Questionnaire Set.
+ </summary>
+</member><member name="T:QM.PDA.BO.Functions">
+	<summary>
+ Provides functions to be used by the custom code.
+ </summary>
+</member><member name="M:QM.PDA.BO.User.GetAll">
+	<summary>
+ Gets a list of users
+ </summary>
+	<returns>A <c>List</c> of users</returns>
+</member><member name="M:QM.PDA.BO.User.Login(System.String,System.String)">
+	<summary>
+ Get a user information from the security db
+ </summary>
+	<param name="PDAUserName">PDA user name</param>
+	<param name="PDAPassword">PDA password</param>
+	<returns>A <c>&gt;User</c> if the person exist, <c>Nothing</c> otherwise</returns>
+</member><member name="M:QM.PDA.BO.User.#ctor(System.Data.DataRow)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="row">DataRow with all the information</param>
+	<remarks></remarks>
+</member><member name="M:QM.PDA.BO.User.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the properties
+ </summary>
+	<param name="row">DataRow with all the information</param>
+</member><member name="T:QM.PDA.BO.User">
+	<summary>
+ Class with the information of a user
+ </summary>
+</member><member name="M:QM.PDA.BO.Section.#ctor(System.Int32)">
+	<summary>
+ Initializes a new instance of the Section class.
+ </summary>
+	<param name="sectionID">The unique identifier of the Section to instantiate.</param>
+</member><member name="M:QM.PDA.BO.Section.GetAll(System.Int32)">
+	<summary>
+ Gets all the Sections of the specified Questionnaire.
+ </summary>
+	<param name="questionnaireID">The unique identifier of the Questionnaire.</param>
+	<returns>A <c>List(Of Section)</c> with all the Sections of the Questionnaire.</returns>
+	<remarks>The resulting list might be empty but will never be <c>Null</c>.</remarks>
+</member><member name="M:QM.PDA.BO.Section.GetAllValid(System.Int32)">
+	<summary>
+ Gets all the Sections of the specified Questionnaire that fulfills their Precondition.
+ </summary>
+	<param name="questionnaireID">The unique identifier of the Questionnaire.</param>
+	<returns>A <c>List(Of Section)</c> with all the Sections of the Questionnaire that fulfills their Precondition.</returns>
+</member><member name="M:QM.PDA.BO.Section.PopulateProperties(System.Data.DataRow)">
+	<summary>
+ Sets the values for the properties of this instance of a Section.
+ </summary>
+	<param name="row">A <c>DataRow</c> with the Section properties.</param>
+</member><member name="T:QM.PDA.BO.Section">
+	<summary>
+ Represents a Section of a Questionnaire.
+ </summary>
+</member>
+</members>
+</doc>
