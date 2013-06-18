@@ -1,4 +1,4 @@
 QMPDA
 =====
 
-Questionnaire Manager PDA application.
+Questionnaire Manager Engine for Windows Mobile 5.0 devices.
